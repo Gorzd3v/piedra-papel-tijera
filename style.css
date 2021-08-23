@@ -1,0 +1,120 @@
+body {
+  color: white;
+  font-family: quicksand;
+  font-size: 35px;
+  background-color: #151514;
+}
+
+.restart {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+}
+
+#resetBtn {
+  display: block;
+  margin: 20px auto;
+  background: rgb(17, 17, 17);
+  color: white;
+  border: 0;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+#resetBtn:hover {
+ background: rgb(59, 59, 59);
+}
+
+.popup {
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  background: rgb(41, 41, 41);
+  color: white;
+  margin: 10% auto;
+  padding: 20px;
+  position: relative;
+}
+.select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resultados {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#piedra {
+  background-image: url(images/piedraBtn.png); 
+  height: 180px;
+  width: 180px;
+  border: 0;
+  cursor: pointer;
+  }
+#piedra:hover{
+  transform: scale(1.1); 
+}
+
+#papel {
+  background-image: url(images/papelBtn.png);
+  height: 180px;
+  width: 180px;
+  border: 0;
+  cursor: pointer;
+}
+#papel:hover{
+  transform: scale(1.1); 
+}
+#tijera {
+  background-image: url(images/tijeraBtn.png);
+  height: 180px;
+  width: 180px;
+  border: 0;
+  cursor: pointer;
+}
+#tijera:hover{
+  transform: scale(1.1); 
+}
+.res {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ronda {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#pc,
+#player {
+  width: 100px;
+  height: 100px;
+}
+
+@media only screen and (max-width: 450px) {
+  body{
+    font-size: 30px;
+  }
+  
+  #piedra , #papel , #tijera{
+    height: 100px;
+    width: 100px;
+  }
+  #piedra{
+    background-image: url(/images/piedraBtnMq.png);
+  }
+  #papel{
+    background-image: url(/images/papelBtnMq.png);
+  }
+  #tijera{
+    background-image: url(/images/tijeraBtnMq.png);
+  }
+}
