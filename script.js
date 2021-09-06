@@ -1,5 +1,8 @@
+// Varaibles de puntuacion de los jugadores
 let pScore = 0;
 let cScore = 0;
+
+// Se selecionan los elementos desde el documento HTML
 
 const piedra = document.querySelector("#piedra");
 const papel = document.querySelector("#papel");
@@ -10,6 +13,8 @@ const computerScore = document.querySelector("#computerScore");
 const container = document.querySelector(".container");
 const player = document.querySelector("#player");
 const pc = document.querySelector("#pc");
+
+// computerPlay hace una eleccion azar entre 3
 
 function computerPlay() {
   let resultado = Math.floor(Math.random() * 3) + 1;
@@ -23,6 +28,8 @@ function computerPlay() {
   } else document.getElementById("pc").src = "/images/pcTijera.png";
   return "Tijera";
 }
+
+// game decide el ganador de cada ronda y muestra el score actual
 
 function game(playerSelection, computerSelection) {
   let r;
@@ -53,6 +60,8 @@ function game(playerSelection, computerSelection) {
   }
 }
 
+// funcion reset para reiniciar el juego cuando acaba
+
 function reset() {
   pScore = 0;
   cScore = 0;
@@ -63,7 +72,9 @@ function reset() {
   document.getElementById("player").src = "/images/default.png";
 }
 
-
+/*End crea el pop up de final de partida y muestra quien fue el ganador de la misma , 
+  no es la manera mas eficiente de hacerlo (se puede hacer en HTML y ocultarlo hasta el momento de su uso)
+  , pero lo hice de esta manera con la intencion practicar manipulacion del DOM */
 
 function end() {
   const restart = document.createElement("div");
@@ -92,6 +103,8 @@ function end() {
     restart.style.display = "none";
   });
 }
+
+// Eventos de los botones para la eleccion del jugador
 
 piedra.addEventListener("click", () => game("Piedra", computerPlay()));
 papel.addEventListener("click", () => game("Papel", computerPlay()));
